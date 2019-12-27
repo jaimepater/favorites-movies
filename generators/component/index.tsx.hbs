@@ -1,0 +1,23 @@
+/**
+ *
+ * {{ properCase name }}
+ *
+ */
+import * as React from 'react';
+{{#if mobx}}
+    import { observer } from 'mobx-react';
+    import useStores from "../../commons/hooks/useStores";
+{{/if}}
+
+    interface {{ properCase name }}Props {
+
+    }
+    const {{ properCase name }} =  {{#if mobx}} observer( {{/if}}() => {
+    {{#if mobx}} const { managerStore  } =  useStores(); {{/if}}
+    return ( <div>{{ properCase name }}</div>);
+   }
+    {{#if mobx}}
+        )
+    {{/if}}
+
+export default {{ properCase name }};
